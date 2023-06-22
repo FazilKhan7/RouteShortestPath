@@ -24,13 +24,10 @@ class RouteViewController: UIViewController {
     private lazy var addAddressButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        let origImage = UIImage(named: "address")
-        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
-        button.setImage(tintedImage, for: .normal)
-        button.tintColor = .black
-        button.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.tintColor = .black
+        let origImage = UIImage(named: "location")
+        button.setImage(origImage, for: .normal)
+        button.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
         return button
     }()
@@ -38,10 +35,11 @@ class RouteViewController: UIViewController {
     private lazy var routeButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Route", for: .normal)
+        button.setImage(UIImage(named: "route"), for: .normal)
         button.isHidden = true
-        button.setTitleColor(UIColor.black, for: .normal)
-        button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .largeTitle, compatibleWith: .current)
+        button.setTitleColor(UIColor.orange, for: .normal)
+        button.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 75).isActive = true
         
         return button
     }()
@@ -49,14 +47,11 @@ class RouteViewController: UIViewController {
     private lazy var resetButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        let origImage = UIImage(named: "reset")
-        let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
-        button.setImage(tintedImage, for: .normal)
-        button.tintColor = .black
+        let origImage = UIImage(named: "circle")
+        button.setImage(origImage, for: .normal)
         button.isHidden = true
-        button.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        button.tintColor = .black
+        button.widthAnchor.constraint(equalToConstant: 55).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 55).isActive = true
         
         return button
     }()
